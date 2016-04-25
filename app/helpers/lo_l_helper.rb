@@ -1,0 +1,2 @@
+module LoLHelper
+end
