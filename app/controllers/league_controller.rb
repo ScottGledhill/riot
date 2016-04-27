@@ -5,12 +5,9 @@ class LeagueController < ApplicationController
     @gang.call
     @gang.wins
     @gang.losses
-  end
-
-  def freeze
-    @freeze = Freeze.new
-    @freeze.call
-    @freeze.wins
-    @freeze.losses
+    @seven = Seven.new
+    @seven.call
+    @seven.wins
+    @seven.losses
   end
 end
