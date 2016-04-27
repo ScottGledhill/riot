@@ -1,0 +1,2 @@
+module FreezeHelper
+end

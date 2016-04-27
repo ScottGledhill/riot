@@ -7,14 +7,20 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class="background">
+  <!-- <div class="background">
     <img src="http://localhost:3000/assets/lolbg.jpeg" class="background" alt="">
-  </div>
+  </div> -->
 
   <div class="container">
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
     <section id="cg"> CrowGang has <%= @gang.wins %> ranked wins! <br />
     CrowGang has <%= @gang.losses %> ranked losses!
+  </div>
+
+  <div class="container2">
+    <img src="http://localhost:3000/assets/freeze.jpeg" class="img-circle" alt="freeze" width="254" height="236"><br />
+    <section id="cg"> Freeze has <%= @freeze.wins %> ranked wins! <br />
+    Freeze has <%= @freeze.losses %> ranked losses!
   </div>
 
 </body>
