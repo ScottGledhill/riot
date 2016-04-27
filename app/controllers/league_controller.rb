@@ -1,8 +1,9 @@
 class LeagueController < ApplicationController
 
   def index
-    CrowGang.call
-    CrowGang.wins
-    CrowGang.losses
+    @gang = CrowGang.new
+    gang.call
+    gang.wins
+    gang.losses
   end
 end
