@@ -1,10 +1,9 @@
 
 body{
   background: url(http://localhost:3000/assets/voli.jpeg);
-  background-repeat: no-repeat;
   background-attachment: absolute;
   overflow:hidden;
-  background-position: center;
+//   background-position: center;
 }
 
 #gradient{
@@ -16,10 +15,12 @@ body{
  -moz-box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
  box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
 }
+
 .searchbox{
+ text-align: center;
  background-color:#fffbf8;
  padding:13px;
- width:335px;
+ width:320px;
  margin:580px auto;
  -webkit-box-sizing:border-box;
  -moz-box-sizing:border-box;
@@ -45,7 +46,7 @@ body{
 input[type="search"]{
  width:250px;
  height:30px;
- padding-left:15px;
+ padding-left:65px;
  border-radius:6px;
  border:none;
  color:#939393;
@@ -94,25 +95,27 @@ input[type="search"]:focus{
 #cg {
   font-size: 22px;
   text-align: left;
-  color: #FFCC66;
+  color: green;
 }
 
 #seven {
   font-size: 22px;
   text-align: left;
-  color: #FFCC66;
+  color: green;
 }
 
 .container {
-position: absolute;
- top: 30%;
- left: 69%;
+  font-family: "Lucida Console", Times, serif;
+  position: absolute;
+ top: 40%;
+ left: 68%;
  transform: translate(-50%, -50%);
 }
 
 .twenty {
+  font-family: "Lucida Console", Times, serif;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 62%;
   transform: translate(-10%, -50%);
 }
