@@ -11,7 +11,6 @@ class LeagueController < ApplicationController
     @seven.wins
     @seven.losses
   end
-  # 
-  # def create
-  #
+# get rails to grab query from searchbar? use param value to create db entry
+#with wins, losses and ids, and make specific api call
 end
