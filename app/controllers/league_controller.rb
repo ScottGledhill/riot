@@ -5,9 +5,13 @@ class LeagueController < ApplicationController
     @gang.call
     @gang.wins
     @gang.losses
+
     @seven = Seven.new
     @seven.call
     @seven.wins
     @seven.losses
   end
+  # 
+  # def create
+  #
 end
