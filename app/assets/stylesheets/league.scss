@@ -2,8 +2,9 @@
 body{
   background: url(http://localhost:3000/assets/voli.jpeg);
   background-repeat: no-repeat;
- background-attachment: fixed;
- background-position: center;
+  background-attachment: absolute;
+  overflow:hidden;
+  background-position: center;
 }
 
 #gradient{
