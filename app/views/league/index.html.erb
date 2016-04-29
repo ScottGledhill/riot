@@ -12,7 +12,7 @@
 </head>
 <body>
  <div id="gradient"></div>
- <form class="searchbox" action="league#create" method="post">
+ <form class="searchbox" action="league#index" method="post">
   <input type="search" placeholder="Search Summoner" />
   <button type="submit" value="search">&nbsp;</button>
  </form>
@@ -23,10 +23,10 @@
       CrowGang has <%= @gang.losses %> ranked losses!
     </div>
 
-    <div class="twenty">
-      <img src="http://localhost:3000/assets/24.png" class="img-circle" alt="24" width="254" height="236"><br />
-      <section id="seven"> TEAM24SEVEN has <%= @seven.wins %> ranked wins! <br />
-        TEAM24SEVEN has <%= @seven.losses %> ranked losses!
+  <div class="twenty">
+    <img src="http://localhost:3000/assets/24.png" class="img-circle" alt="24" width="254" height="236"><br />
+    <section id="seven"> TEAM24SEVEN has <%= @seven.wins %> ranked wins! <br />
+      TEAM24SEVEN has <%= @seven.losses %> ranked losses!
   </div>
 </body>
 </html>
