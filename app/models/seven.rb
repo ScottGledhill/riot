@@ -5,7 +5,7 @@ class Seven < ActiveRecord::Base
   end
 
   def losses
-    @losses = JSON.parse(@client)["playerStatSummaries"][8]["losses"]
+    @losses = JSON.parse(@client)["playerStatSummaries"][7]["losses"]
   end
 
   def wins

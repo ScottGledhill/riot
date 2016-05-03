@@ -3,19 +3,24 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
   <%= csrf_meta_tags %>
 </head>
 <body>
- <div id="gradient"></div>
+
+  <%= form_tag("/league#new", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
+ <!-- <div id="gradient"></div>
  <form class="searchbox" action="league#index" method="post">
   <input type="search" placeholder="Search Summoner" />
   <button type="submit" value="search">&nbsp;</button>
- </form>
+ </form> -->
 
   <div class="container">
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
