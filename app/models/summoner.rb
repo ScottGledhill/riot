@@ -7,6 +7,5 @@ class Summoner < ActiveRecord::Base
   end
 
   def search_query
-    @summoner_id = Summoner.new(user_params[:searchbox])
   end
 end

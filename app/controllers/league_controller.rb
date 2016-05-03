@@ -1,11 +1,9 @@
 class LeagueController < ApplicationController
 
-  def new
-    @params = params[:q]
-    p @params
-  end
-
   def index
+  p @params = params[:q]
+    @name = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/#{@params}?api_key=#{ENV['LOL_KEY']}")
+ p  @summoner = JSON.parse(@name)
     @gang = CrowGang.new
     @gang.call
     @gang.wins
@@ -17,4 +15,11 @@ class LeagueController < ApplicationController
     @seven.losses
   end
 
+  def summoner_name
+
+  end
+
+  def call
+    @client = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/82746988/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}")
+  end
 end
