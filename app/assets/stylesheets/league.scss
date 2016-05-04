@@ -1,9 +1,9 @@
 
 body{
-  background: url(http://localhost:3000/assets/voli.jpeg);
+  background: url(http://localhost:3000/assets/lol.png);
   background-attachment: absolute;
   overflow:hidden;
-//   background-position: center;
+  background-repeat: no-repeat;
 }
 
 #gradient{
@@ -95,13 +95,13 @@ input[type="search"]:focus{
 #cg {
   font-size: 22px;
   text-align: left;
-  color: green;
+  color: purple;
 }
 
 #seven {
   font-size: 22px;
   text-align: left;
-  color: green;
+  color: purple;
 }
 
 .container {

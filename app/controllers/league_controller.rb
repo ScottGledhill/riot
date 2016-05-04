@@ -1,25 +1,17 @@
 class LeagueController < ApplicationController
 
   def index
+    @gang = CrowGang.new
+    @gang.use_model
+    @seven = Seven.new
+    @seven.use_model
+  end
+
+  def retrieve_summoner_name
     @params = params[:q]
     @params_adjusted = @params.to_sym
     @name = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/#{@params_adjusted}?api_key=#{ENV['LOL_KEY']}")
     @summoner = JSON.parse(@name)[@params]["id"]
-    call
-
-
-    @gang = CrowGang.new
-    @gang.call
-    @gang.wins
-    @gang.losses
-
-    @seven = Seven.new
-    @seven.call
-    @seven.wins
-    @seven.losses
-  end
-
-  def retrieve_summoner_name
   end
 
   def call

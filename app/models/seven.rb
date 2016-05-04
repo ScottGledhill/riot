@@ -11,4 +11,10 @@ class Seven < ActiveRecord::Base
   def wins
     @wins = JSON.parse(@client)["playerStatSummaries"][8]["wins"]
   end
+
+  def use_model
+    call
+    wins
+    losses
+  end
 end

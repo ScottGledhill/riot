@@ -11,4 +11,10 @@ class CrowGang < ActiveRecord::Base
   def wins
     @wins = JSON.parse(@client)["playerStatSummaries"][2]["wins"]
   end
+  
+  def use_model
+    call
+    wins
+    losses
+  end
 end
