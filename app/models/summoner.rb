@@ -1,8 +1,10 @@
 class Summoner < ActiveRecord::Base
 
-  def create
+  def retrieve_summoner_name
 
   end
 
-
+  def summoner_call
+    
+  end
 end
