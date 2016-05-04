@@ -2,12 +2,10 @@ class LeagueController < ApplicationController
 
   def index
     if params.include?(:q)
-    p  'running'
       @summon = Summoner.new
       @summon.retrieve_summoner_name_from_id(params)
       model_call
     else
-    p  'not running'
       model_call
       render action: "index"
     end
