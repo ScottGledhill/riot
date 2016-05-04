@@ -104,11 +104,17 @@ input[type="search"]:focus{
   color: purple;
 }
 
-.container {
+#ss {
+  font-size: 22px;
+  text-align: left;
+  color: purple;
+}
+
+.crowgang {
   font-family: "Lucida Console", Times, serif;
   position: absolute;
  top: 40%;
- left: 68%;
+ left: 48%;
  transform: translate(-50%, -50%);
 }
 
@@ -117,5 +123,13 @@ input[type="search"]:focus{
   position: absolute;
   top: 40%;
   left: 62%;
+  transform: translate(-10%, -50%);
+}
+
+.searched_summoner {
+  font-family: "Lucida Console", Times, serif;
+  position: absolute;
+  top: 40%;
+  left: 18%;
   transform: translate(-10%, -50%);
 }
