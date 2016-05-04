@@ -22,6 +22,12 @@
   <button type="submit" value="search">&nbsp;</button>
  </form> -->
 
+ <div class="searched_summoner">
+     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
+   <section id="ss"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
+     <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses!
+  </div>
+
   <div class="container">
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
     <section id="cg"> CrowGang has <%= @gang.wins %> ranked wins! <br />
