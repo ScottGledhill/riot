@@ -4,7 +4,7 @@ class LeagueController < ApplicationController
     if params.include?(:q)
     p  'running'
       @summon = Summoner.new
-      @summon.retrieve_summoner_name(params)
+      @summon.retrieve_summoner_name_from_id(params)
       seven
       crowgang
     else
