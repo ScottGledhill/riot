@@ -1,12 +1,14 @@
 class LeagueController < ApplicationController
 
   def index
-    if !params.nil?
+    if params.include?(:q)
+    p  'running'
       @summon = Summoner.new
       @summon.retrieve_summoner_name(params)
       seven
       crowgang
     else
+    p  'not running'
       seven
       crowgang
       render action: "index"
