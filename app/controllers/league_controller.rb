@@ -5,17 +5,20 @@ class LeagueController < ApplicationController
     p  'running'
       @summon = Summoner.new
       @summon.retrieve_summoner_name_from_id(params)
-      seven
-      crowgang
+      model_call
     else
     p  'not running'
-      seven
-      crowgang
+      model_call
       render action: "index"
     end
   end
 
   private
+
+  def model_call
+    seven
+    crowgang
+  end
 
   def seven
     @seven = Seven.new
