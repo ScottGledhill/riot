@@ -32,9 +32,9 @@ end
 
 
 
-
-# fix no method error at start, with summoner name running, do if else statement somewhere
 # fix wins and losses method so grab ranked solo
 # fix handling errors, with flash notice
 # make actual searchbox work
+# make multiple searches, html class, persist past searches?
+# rescale previous searches to fit the page better, html class?
 #

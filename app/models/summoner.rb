@@ -13,12 +13,13 @@ class Summoner < ActiveRecord::Base
   end
 
   def summoner_call
+    byebug
     @client = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/#{@summoner}/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}")
   end
 
   def wins
-    # @wins = JSON.parse(@client)["playerStatSummaries"].each do |item| puts item["playerStatSummaryType"=>"RankedSolo5x5"]["wins"]
-    # end
+    @wins = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}
+    @wins.select {|key| key.has_value?("wins")}
   end
 
   def losses
