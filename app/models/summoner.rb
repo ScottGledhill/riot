@@ -17,7 +17,8 @@ class Summoner < ActiveRecord::Base
   end
 
   def wins
-    @wins = JSON.parse(@client)["playerStatSummaries"][2]["wins"]
+    # @wins = JSON.parse(@client)["playerStatSummaries"].each do |item| puts item["playerStatSummaryType"=>"RankedSolo5x5"]["wins"]
+    # end
   end
 
   def losses

@@ -5,6 +5,7 @@ class LeagueController < ApplicationController
       @summon = Summoner.new
       @summon.retrieve_summoner_name_from_id(params)
       model_call
+      render action: "summoner"
     else
       model_call
       render action: "index"
@@ -12,11 +13,6 @@ class LeagueController < ApplicationController
   end
 
   private
-
-  def model_call
-    seven
-    crowgang
-  end
 
   def seven
     @seven = Seven.new
@@ -27,4 +23,18 @@ class LeagueController < ApplicationController
     @gang = CrowGang.new
     @gang.use_model
   end
+
+  def model_call
+    seven
+    crowgang
+  end
 end
+
+
+
+
+# fix no method error at start, with summoner name running, do if else statement somewhere
+# fix wins and losses method so grab ranked solo
+# fix handling errors, with flash notice
+# make actual searchbox work
+#
