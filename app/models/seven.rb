@@ -5,11 +5,11 @@ class Seven < ActiveRecord::Base
   end
 
   def losses
-    @losses = JSON.parse(@client)["playerStatSummaries"][7]["losses"]
+    @losses = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}[0]["losses"]
   end
 
   def wins
-    @wins = JSON.parse(@client)["playerStatSummaries"][8]["wins"]
+    @wins = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}[0]["wins"]
   end
 
   def use_model
