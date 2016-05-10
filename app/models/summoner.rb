@@ -1,4 +1,4 @@
-class Summoner < ActiveRecord::Base
+class Summoner
 
   def retrieve_summoner_name_from_id(params)
     @params_name = params[:q]

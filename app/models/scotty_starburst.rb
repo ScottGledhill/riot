@@ -1,7 +1,8 @@
-class Seven < ActiveRecord::Base
+class ScottyStarburst
 
   def call
-    @client = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/82746988/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}")
+    @client = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/81323101/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}")
+    #85098161 change when I become ranked
   end
 
   def losses

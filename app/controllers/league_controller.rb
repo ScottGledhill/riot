@@ -14,9 +14,9 @@ class LeagueController < ApplicationController
 
   private
 
-  def seven
-    @seven = Seven.new
-    @seven.use_model
+  def scottystarburst
+    @scotty = ScottyStarburst.new
+    @scotty.use_model
   end
 
   def crowgang
@@ -25,7 +25,7 @@ class LeagueController < ApplicationController
   end
 
   def model_call
-    seven
+    scottystarburst
     crowgang
   end
 end

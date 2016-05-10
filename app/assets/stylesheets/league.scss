@@ -113,9 +113,13 @@ input[type="search"]:focus{
 .crowgang {
   font-family: "Lucida Console", Times, serif;
   position: absolute;
- top: 40%;
- left: 48%;
- transform: translate(-50%, -50%);
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  display:block;
+  height: auto;
+  width: auto
 }
 
 .twenty {
@@ -124,6 +128,10 @@ input[type="search"]:focus{
   top: 40%;
   left: 62%;
   transform: translate(-10%, -50%);
+  max-width: 100%;
+  display:block;
+  height: auto;
+  width: auto
 }
 
 .searched_summoner {
@@ -132,6 +140,10 @@ input[type="search"]:focus{
   top: 40%;
   left: 18%;
   transform: translate(-10%, -50%);
+  max-width: 100%;
+  display:block;
+  height: auto;
+  width: auto
 }
 
 .no_games_searched_summoner {
@@ -140,6 +152,10 @@ input[type="search"]:focus{
   top: 40%;
   left: 18%;
   transform: translate(-10%, -50%);
+  max-width: 100%;
+  display:block;
+  height: auto;
+  width: auto
 }
 
 .username {
@@ -148,4 +164,16 @@ input[type="search"]:focus{
   top: 10%;
   left: 47%;
   transform: translate(-10%, -50%);
+}
+
+.images {
+  font-family: "Lucida Console", Times, serif;
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  transform: translate(-10%, -50%);
+  max-width: 100%;
+  display:block;
+  height: auto;
+  width: auto
 }
