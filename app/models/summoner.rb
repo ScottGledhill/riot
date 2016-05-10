@@ -18,9 +18,11 @@ class Summoner < ActiveRecord::Base
 
   def wins
     @wins = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}[0]["wins"]
+    rescue => e
   end
 
   def losses
     @losses = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}[0]["losses"]
+    rescue => e
   end
 end

@@ -22,11 +22,19 @@
   <button type="submit" value="search">&nbsp;</button>
  </form> -->
 
+ <% if @summon.wins == nil  %>
+ <div class="no_games_searched_summoner">
+   <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" alt="crow" width="254" height="236"><br />
+   <section id="ss"> <%= @summon.summoner_name %> has yet to <br/> play a ranked game!
+   </div>
+    <% else %>
  <div class="searched_summoner">
      <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" alt="crow" width="254" height="236"><br />
    <section id="ss"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
      <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses!
   </div>
+   <% end %>
+
 
   <div class="crowgang">
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />

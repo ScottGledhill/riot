@@ -32,7 +32,6 @@ end
 
 
 
-# fix wins and losses method so grab ranked solo
 # fix handling errors, with flash notice
 # make actual searchbox work
 # make multiple searches, html class, persist past searches?
