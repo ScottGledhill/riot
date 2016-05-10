@@ -23,13 +23,20 @@
  </form> -->
 
  <% if @summon.wins == nil  %>
+ <div class="username">
+   <img src="http://localhost:3000/assets/defeat.jpeg" class="img-circle" width="200" height="180"><br />
+   <section id="ss"> <%= @summon.summoner_name %> does not exist! <br/>
+   </div>
+
+ <% elsif @summon.wins == nil  %>
  <div class="no_games_searched_summoner">
-   <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" alt="crow" width="254" height="236"><br />
+   <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
    <section id="ss"> <%= @summon.summoner_name %> has yet to <br/> play a ranked game!
    </div>
+
     <% else %>
  <div class="searched_summoner">
-     <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" alt="crow" width="254" height="236"><br />
+     <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
    <section id="ss"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
      <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses!
   </div>
@@ -37,13 +44,13 @@
 
 
   <div class="crowgang">
-    <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
+    <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" width="254" height="236"><br />
     <section id="cg"> CrowGang has <%= @gang.wins %> ranked wins! <br />
       CrowGang has <%= @gang.losses %> ranked losses!
     </div>
 
   <div class="twenty">
-    <img src="http://localhost:3000/assets/24.png" class="img-circle" alt="24" width="254" height="236"><br />
+    <img src="http://localhost:3000/assets/24.png" class="img-circle" width="254" height="236"><br />
     <section id="seven"> TEAM24SEVEN has <%= @seven.wins %> ranked wins! <br />
       TEAM24SEVEN has <%= @seven.losses %> ranked losses!
   </div>
