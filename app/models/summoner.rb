@@ -3,12 +3,16 @@ class Summoner < ActiveRecord::Base
   def retrieve_summoner_name_from_id(params)
     @params_name = params[:q]
     @params = params[:q].downcase.to_sym
-    @name = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/#{@params}?api_key=#{ENV['LOL_KEY']}")
-    rescue
+    searched_name_call
     if @name
       @summoner = JSON.parse(@name)[@params.to_s]["id"]
       summoner_call
     end
+  end
+
+  def searched_name_call
+    @name = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/#{@params}?api_key=#{ENV['LOL_KEY']}")
+    rescue
   end
 
   def summoner_name

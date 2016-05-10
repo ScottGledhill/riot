@@ -22,24 +22,24 @@
   <button type="submit" value="search">&nbsp;</button>
  </form> -->
 
- <% if @summon.wins == nil  %>
- <div class="username">
-   <img src="http://localhost:3000/assets/defeat.jpeg" class="img-circle" width="200" height="180"><br />
-   <section id="ss"> <%= @summon.summoner_name %> does not exist! <br/>
-   </div>
+ <% if @summon.searched_name_call == nil %>
+  <div class="username">
+    <img src="http://localhost:3000/assets/defeat.jpeg" class="img-circle" width="200" height="180"><br />
+    <section id="cg"> <%= @summon.summoner_name %> does not exist! <br/>
+    </div>
 
- <% elsif @summon.wins == nil  %>
- <div class="no_games_searched_summoner">
-   <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
-   <section id="ss"> <%= @summon.summoner_name %> has yet to <br/> play a ranked game!
-   </div>
+  <% elsif @summon.wins == nil  %>
+  <div class="no_games_searched_summoner">
+    <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
+    <section id="cg"> <%= @summon.summoner_name %> has yet to <br/> play a ranked game!
+    </div>
 
-    <% else %>
+  <% else %>
  <div class="searched_summoner">
-     <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
-   <section id="ss"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
-     <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses!
-  </div>
+      <img src="http://localhost:3000/assets/summoner.jpeg" class="img-circle" width="254" height="236"><br />
+    <section id="ss"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
+      <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses!
+   </div>
    <% end %>
 
 
