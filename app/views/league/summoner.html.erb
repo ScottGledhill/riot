@@ -4,23 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <%= form_tag("/league#new", method: "get") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-
- <!-- <div id="gradient"></div>
- <form class="searchbox" action="league#index" method="post">
-  <input type="search" placeholder="Search Summoner" />
-  <button type="submit" value="search">&nbsp;</button>
- </form> -->
+  <form class="searchbox" action="league#new" method="get">
+   <label for=":q"> <input id="q" placeholder="Search a Summoner..." name="q" type="text">
+  </form>
 
  <% if @summon.searched_name_call == nil %>
   <div class="username">
@@ -48,16 +39,10 @@
       CrowGang has <%= @gang.losses %> ranked losses!
     </div>
 
-  <div class="twenty">
+  <div class="scotty">
     <img src="http://localhost:3000/assets/24.png" class="img-circle" width="254" height="236"><br />
     <section id="cg"> ScottyStarburst has <%= @scotty.wins %> ranked wins! <br />
       ScottyStarburst has <%= @scotty.losses %> ranked losses!
   </div>
 </body>
 </html>
-
-
-
-<!-- 81323101 - kai
-106 - volibear
-85098161 - me -->

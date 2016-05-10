@@ -1,5 +1,6 @@
 
 body{
+  font-family: "Papyrus", Times, serif!important;
   background: url(http://localhost:3000/assets/lol.png);
   background-attachment: absolute;
   overflow:hidden;
@@ -8,7 +9,7 @@ body{
 
 #gradient{
  width:0;
- height:50px;
+ height:10px;
  margin:0 auto;
  border-radius:100%;
  -webkit-box-shadow: 0 50px 200px 150px rgba(255, 255, 255, 0.93);
@@ -19,9 +20,12 @@ body{
 .searchbox{
  text-align: center;
  background-color:#fffbf8;
- padding:13px;
- width:320px;
- margin:580px auto;
+ padding:11px;
+ width:300px;
+ margin-top: 198px;
+ margin-right: 198px;
+ margin-bottom: 198px;
+ margin-left: 0px;
  -webkit-box-sizing:border-box;
  -moz-box-sizing:border-box;
  box-sizing:border-box;
@@ -75,43 +79,31 @@ input[type="search"]{
  0 15px 15px 0 rgba(41, 41, 41, 0.09) inset;
 }
 
-button[type="submit"]{
- width:35px;
- height:30px;
- background-image:url(img/search-btn.png);
- background-repeat: no-repeat;
- background-position: 10px 5px;
- background-color:transparent;
- -webkit-background-size:20px 20px;
- background-size:20px 20px;
- border:none;
- cursor:pointer;
-}
 
 input[type="search"]:focus{
  outline:0;
 }
 
 #cg {
-  font-size: 22px;
+  font-size: 16px;
   text-align: left;
   color: purple;
 }
 
 #seven {
-  font-size: 22px;
+  font-size: 16px;
   text-align: left;
   color: purple;
 }
 
 #ss {
-  font-size: 22px;
+  font-size: 16px;
   text-align: left;
   color: purple;
 }
 
 .crowgang {
-  font-family: "Lucida Console", Times, serif;
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 40%;
   left: 48%;
@@ -122,8 +114,8 @@ input[type="search"]:focus{
   width: auto
 }
 
-.twenty {
-  font-family: "Lucida Console", Times, serif;
+.scotty {
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 40%;
   left: 62%;
@@ -135,7 +127,7 @@ input[type="search"]:focus{
 }
 
 .searched_summoner {
-  font-family: "Lucida Console", Times, serif;
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 40%;
   left: 18%;
@@ -147,7 +139,7 @@ input[type="search"]:focus{
 }
 
 .no_games_searched_summoner {
-  font-family: "Lucida Console", Times, serif;
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 40%;
   left: 18%;
@@ -159,7 +151,7 @@ input[type="search"]:focus{
 }
 
 .username {
-  font-family: "Lucida Console", Times, serif;
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 10%;
   left: 47%;
@@ -167,7 +159,7 @@ input[type="search"]:focus{
 }
 
 .images {
-  font-family: "Lucida Console", Times, serif;
+  font-family: "Papyrus", Times, serif;;
   position: absolute;
   top: 40%;
   left: 18%;

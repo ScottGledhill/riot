@@ -10,17 +10,10 @@
 </head>
 <body>
 
-  <%= form_tag("/league#new", method: "get") do %>
-    <%= label_tag(:q, "Search for:") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
-  <% end %>
-
- <!-- <div id="gradient"></div>
- <form class="searchbox" action="league#index" method="post">
-  <input type="search" placeholder="Search Summoner" />
-  <button type="submit" value="search">&nbsp;</button>
- </form> -->
+  <div id="gradient"></div>
+  <form class="searchbox" action="league#new" method="get">
+   <label for=":q"> <input id="q" placeholder="Search a Summoner..." name="q" type="text">
+  </form>
 
   <div class="crowgang">
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
@@ -35,9 +28,3 @@
   </div>
 </body>
 </html>
-
-
-
-<!-- 81323101 - kai
-106 - volibear
-85098161 - me -->
