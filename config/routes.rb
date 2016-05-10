@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "league#index"
 
     resources :league
+
+    match "/404", :to => "league#new", :via => :all
+    match "/500", :to => "league#index", :via => :all
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
