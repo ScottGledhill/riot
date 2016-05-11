@@ -32,4 +32,8 @@ class Summoner
     @losses = JSON.parse(@client)["playerStatSummaries"].select {|hash| hash.has_value?("RankedSolo5x5")}[0]["losses"]
     rescue
   end
+
+  def avatar
+    p @params_name
+  end
 end

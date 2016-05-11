@@ -2,8 +2,7 @@ class LeagueController < ApplicationController
 
   def index
     if params.include?(:q)
-      summoner_params
-      avatar_params
+      summoner
       model_call
       render action: "summoner"
     else
@@ -29,14 +28,10 @@ class LeagueController < ApplicationController
     crowgang
   end
 
-  def summoner_params
+  def summoner
     @summon = Summoner.new
     @summon.retrieve_summoner_name_from_id(params)
-  end
-
-  def avatar_params
-    @avatar = Avatar.new
-    @avatar.check
+    @summon.avatar
   end
 end
 
