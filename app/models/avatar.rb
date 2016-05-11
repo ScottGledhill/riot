@@ -1,6 +1,9 @@
-class Avatar
+class Avatar < Summoner
 
-  def
-
+  def get_summoner_name
+    @summon = Summoner.new
+    @summon.summoner_name
   end
+
+  def 
 end

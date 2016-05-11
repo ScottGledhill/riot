@@ -36,6 +36,7 @@ class LeagueController < ApplicationController
 
   def avatar_params
     @avatar = Avatar.new
+    @avatar.check
   end
 end
 
