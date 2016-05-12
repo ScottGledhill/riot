@@ -34,6 +34,6 @@ class Summoner
   end
 
   def avatar
-    p @params_name
+    @summoner
   end
 end

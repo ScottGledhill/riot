@@ -37,8 +37,6 @@ end
 
 
 
-# fix handling errors, with flash notice
-# make actual searchbox work
-# make multiple searches, html class, persist past searches?
-# rescale previous searches to fit the page better, html class?
-#
+# make call to find out champ, use [0][1?]
+# find and save champ images
+# match id to image name by same id
