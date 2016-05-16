@@ -36,6 +36,7 @@ class Summoner
   def avatar
     @most_played_champ_id = JSON.parse(champ_id)[0]["championId"]
     @champ = JSON.parse(champ_name)["name"] + "Square.png"
+  rescue
   end
 
   def champ_id
