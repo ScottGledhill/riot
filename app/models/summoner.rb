@@ -34,10 +34,9 @@ class Summoner
   end
 
   def avatar
-    byebug
     champ_name
     @most_played_champ_id = JSON.parse(champ_call)[0]["championId"]
-    @champ = JSON.parse(champ_name)
+    @champ = JSON.parse(champ_name)["name"]
   end
 
   def champ_id
