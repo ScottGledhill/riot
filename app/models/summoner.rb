@@ -34,10 +34,17 @@ class Summoner
   end
 
   def avatar
-    p @most_played_champ_id = JSON.parse(champ_call)[0]["championId"]
+    byebug
+    champ_name
+    @most_played_champ_id = JSON.parse(champ_call)[0]["championId"]
+    @champ = JSON.parse(champ_name)
   end
 
-  def champ_call
+  def champ_id
     RestClient.get("https://euw.api.pvp.net/championmastery/location/EUW1/player/#{@summoner}/champions?api_key=28de0f6c-0011-456e-8342-7ca77b61ddff")
+  end
+
+  def champ_name
+    RestClient.get("https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/103?api_key=#{ENV['LOL_KEY']}")
   end
 end

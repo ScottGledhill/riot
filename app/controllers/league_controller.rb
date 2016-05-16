@@ -36,7 +36,6 @@ class LeagueController < ApplicationController
 end
 
 
-
-# make call to find out champ, use [0][1?]
+# static data
 # find and save champ images
 # match id to image name by same id
