@@ -46,4 +46,12 @@ class Summoner
   def champ_name
     RestClient.get("https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion/#{@most_played_champ_id}?api_key=#{ENV['LOL_KEY']}")
   end
+
+  def summoner_lane
+    p @lane_info = JSON.parse(summoner_lane_call)[0]
+  end
+
+  def summoner_lane_call
+    RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
+  end
 end
