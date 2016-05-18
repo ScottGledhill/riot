@@ -48,7 +48,8 @@ class Summoner
   end
 
   def summoner_lane
-    @lane_info = JSON.parse(summoner_lane_call)["matches"][0]["lane"]
+    JSON.parse(summoner_lane_call)["matches"][0]["lane"]
+  rescue
   end
 
   def summoner_lane_call
