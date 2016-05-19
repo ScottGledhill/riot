@@ -37,6 +37,5 @@ class LeagueController < ApplicationController
 end
 
 
-# static data
-# find and save champ images
-# match id to image name by same id
+#display all champ info when click through to another page
+#https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/85098161/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}
