@@ -39,3 +39,6 @@ end
 
 #display all champ info when click through to another page
 #https://euw.api.pvp.net/api/lol/euw/v1.3/stats/by-summoner/85098161/summary?season=SEASON2016&api_key=#{ENV['LOL_KEY']}
+
+#show division, show if on hotstreak
+#https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/85098161?api_key=f9448b37-6deb-4972-b949-818de948e8a7
