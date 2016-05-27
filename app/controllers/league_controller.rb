@@ -12,6 +12,7 @@ class LeagueController < ApplicationController
   end
 
   def create
+    summoner
     render action: "stats"
   end
   private
@@ -37,6 +38,7 @@ class LeagueController < ApplicationController
     @summon.avatar
     @summon.summoner_lane
     @summon.more_stats
+  rescue
   end
 end
 

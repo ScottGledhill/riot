@@ -36,7 +36,7 @@ class Summoner
   def avatar
     @most_played_champ_id = JSON.parse(champ_id)[0]["championId"]
     @champ = JSON.parse(champ_name)["name"] + "Square.png"
-  rescue
+    rescue
   end
 
   def champ_id
@@ -49,7 +49,7 @@ class Summoner
 
   def summoner_lane
     JSON.parse(summoner_lane_call)["matches"][0]["lane"]
-  rescue
+    rescue
   end
 
   def summoner_lane_call
@@ -59,6 +59,7 @@ class Summoner
   def more_stats
     @tier = JSON.parse(division_call)["#{@summoner}"][0]["tier"]
     @division = JSON.parse(division_call)["#{@summoner}"][0]["entries"][0]["division"]
+    rescue
   end
 
   def division_call
