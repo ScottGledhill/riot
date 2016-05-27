@@ -55,4 +55,8 @@ class Summoner
   def summoner_lane_call
     RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.2/matchlist/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
   end
+
+  def more_stats
+    
+  end
 end

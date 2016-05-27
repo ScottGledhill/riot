@@ -33,6 +33,7 @@ class LeagueController < ApplicationController
     @summon.retrieve_summoner_name_from_id(params)
     @summon.avatar
     @summon.summoner_lane
+    @summon.more_stats
   end
 end
 
