@@ -57,6 +57,10 @@ class Summoner
   end
 
   def more_stats
-    
+    division_call
+  end
+
+  def division_call
+    RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/85098161?api_key=#{ENV['LOL_KEY']}")
   end
 end
