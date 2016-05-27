@@ -31,6 +31,9 @@
     <section id="cg"> <%= @summon.summoner_lane %> LANER
     <section id="cg"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
       <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses! <br />
+      <%= button_to "Advanced Stats", action: "create" %>
+      <form method="post" action="/league/create" class="button_to">
+      </form>
    </div>
    <% end %>
 
@@ -39,6 +42,9 @@
     <section id="cg"> <%= @summon.summoner_lane %> LANER
     <section id="cg"> CrowGang has <%= @gang.wins %> ranked wins! <br />
       CrowGang has <%= @gang.losses %> ranked losses!
+      <%= button_to "Advanced Stats", action: "create" %>
+      <form method="post" action="/league/create" class="button_to">
+      </form>
     </div>
 
   <div class="scotty">
@@ -46,6 +52,10 @@
     <section id="cg"> <%= @summon.summoner_lane %> LANER
     <section id="cg"> ScottyStarburst has <%= @scotty.wins %> ranked wins! <br />
       ScottyStarburst has <%= @scotty.losses %> ranked losses!
+      <%= button_to "Advanced Stats", action: "create" %>
+      <form method="post" action="/league/create" class="button_to">
+      </form>
   </div>
+
 </body>
 </html>

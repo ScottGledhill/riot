@@ -11,6 +11,9 @@ class LeagueController < ApplicationController
     end
   end
 
+  def create
+    render action: "stats"
+  end
   private
 
   def scottystarburst

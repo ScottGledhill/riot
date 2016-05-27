@@ -19,12 +19,18 @@
     <img src="http://localhost:3000/assets/crow.jpg" class="img-circle" alt="crow" width="254" height="236"><br />
     <section id="cg"> CrowGang has <%= @gang.wins %> ranked wins! <br />
       CrowGang has <%= @gang.losses %> ranked losses!
+      <%= button_to "Advanced Stats", action: "create" %>
+      <form method="post" action="/league/create" class="button_to">
+      </form>
     </div>
 
   <div class="scotty">
     <img src="http://localhost:3000/assets/ramsey.jpg" class="img-circle" alt="24" width="254" height="236"><br />
     <section id="cg"> ScottyStarburst has <%= @scotty.wins %> ranked wins! <br />
       ScottyStarburst has <%= @scotty.losses %> ranked losses!
+      <%= button_to "Advanced Stats", action: "create" %>
+      <form method="post" action="/league/create" class="button_to">
+      </form>
   </div>
 </body>
 </html>
