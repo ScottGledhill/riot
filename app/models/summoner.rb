@@ -58,6 +58,7 @@ class Summoner
 
   def more_stats
     @tier = JSON.parse(division_call)["#{@summoner}"][0]["tier"]
+    @division = JSON.parse(division_call)["#{@summoner}"][0]["entries"][0]["division"]
   end
 
   def division_call
