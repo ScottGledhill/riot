@@ -18,7 +18,7 @@ class LeagueController < ApplicationController
     @summon.more_stats
   rescue
   end
-  
+
   private
 
   def scottystarburst

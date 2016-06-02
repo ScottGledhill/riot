@@ -6,12 +6,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <meta charset="UTF-8">
   <%= csrf_meta_tags %>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
 $( "button" ).click(function() {
  $( "p" ).toggle();
 });
-</script>
+</script> -->
 </head>
 <body>
 
@@ -37,8 +37,9 @@ $( "button" ).click(function() {
     <section id="cg"> <%= @summon.summoner_lane %> LANER
     <section id="cg"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
       <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses! <br />
-      <button>Advanced Stats</button>
-      <p><%= @summon.tier %></p>
+      <button>Advanced Stats</button> <br />
+     <%= @summon.tier %>
+     <!-- <%= sleep(2)%> <%=@summon.division %> -->
    </div>
    <% end %>
 
