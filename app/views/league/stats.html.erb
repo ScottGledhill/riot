@@ -1,9 +1,0 @@
-<div class="searched_summoner">
- <img src="http://localhost:3000/assets/icons/<%=@summon.avatar%>" class="img-circle" width="254" height="236"><br />
-   <section id="cg"> <%= @summon.summoner_lane %> LANER
-   <section id="cg"> <%= @summon.summoner_name %> has <%= @summon.wins %> ranked wins! <br />
-     <%= @summon.summoner_name %> has <%= @summon.losses %> ranked losses! <br />
-     <%= link_to "back", action: "index" %>
-     <form method="get" action="/league/index" class="link_to">
-     </form>
-  </div>

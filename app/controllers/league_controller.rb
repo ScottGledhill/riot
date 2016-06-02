@@ -3,7 +3,6 @@ class LeagueController < ApplicationController
   def index
     if params.include?(:q)
       summoner
-      model_call
       render action: "summoner"
     else
       model_call
@@ -11,10 +10,15 @@ class LeagueController < ApplicationController
     end
   end
 
-  def create
-    summoner
-    render action: "stats"
+  def summoner
+    @summon = Summoner.new
+    @summon.retrieve_summoner_name_from_id(params)
+    @summon.avatar
+    @summon.summoner_lane
+    @summon.more_stats
+  rescue
   end
+  
   private
 
   def scottystarburst
@@ -32,14 +36,6 @@ class LeagueController < ApplicationController
     crowgang
   end
 
-  def summoner
-    @summon = Summoner.new
-    @summon.retrieve_summoner_name_from_id(params)
-    @summon.avatar
-    @summon.summoner_lane
-    @summon.more_stats
-  rescue
-  end
 end
 
 
