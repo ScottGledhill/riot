@@ -68,7 +68,7 @@ class Summoner
   end
 
   def division
-    @division = JSON.parse(@call)["#{@summoner}"][0]["entries"][0]["division"]
+    @division = JSON.parse(@call)["#{@summoner}"][0]["entries"].select {|hash| hash.has_key?("playerOrTeamId") & hash.has_value?("#{@summoner}")}[0]["division"]
     rescue
   end
 
