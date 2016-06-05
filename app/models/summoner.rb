@@ -57,21 +57,22 @@ class Summoner
   end
 
   def more_stats
+    division_call
     tier
     division
   end
 
   def tier
-    @tier = JSON.parse(division_call)["#{@summoner}"][0]["tier"]
+    @tier = JSON.parse(@call)["#{@summoner}"][0]["tier"]
     rescue
   end
 
   def division
-    @division = JSON.parse(division_call)["#{@summoner}"][0]["entries"][0]["division"]
+    @division = JSON.parse(@call)["#{@summoner}"][0]["entries"][0]["division"]
     rescue
   end
 
   def division_call
-    RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
+    p @call = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
   end
 end
