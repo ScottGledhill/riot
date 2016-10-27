@@ -73,6 +73,6 @@ class Summoner
   end
 
   def division_call
-    p @call = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
+    @call = RestClient.get("https://euw.api.pvp.net/api/lol/euw/v2.5/league/by-summoner/#{@summoner}?api_key=#{ENV['LOL_KEY']}")
   end
 end
